@@ -227,7 +227,6 @@ def argmax(liste):
 print(argmax([1, 6, 2, 4]))
 ```
 ````
-
 ## Manipulations de listes
 
 Nous présentons dans ce qui suit les opérations élémentaires de manipulation de listes.
@@ -509,3 +508,15 @@ Bien entendu, pour pouvoir utiliser `zip()`, il faut que les listes soient de m�
 1. [Argmax](ex4.1)
 2. [Intersection de listes](ex4.2)
 3. [Union de listes](ex4.3)
+
+
+### Correction 
+```
+def argmax(l):
+    k, m= 0, l[0]
+    for i,e in enumerate(l[1:]):
+        if e>m:
+            k,m=i, e
+           
+    return k+1,m # k indice du plus grand, m plus grand
+```
